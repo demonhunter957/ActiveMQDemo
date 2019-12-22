@@ -24,6 +24,7 @@ public class JmsConsumer_topic {
                 try {
                     System.out.println("****消费者text的消息："+textMessage.getText());
                 }catch (JMSException e) {
+                    e.printStackTrace();
                 }
             }
             if (null != message  && message instanceof MapMessage){
@@ -31,6 +32,7 @@ public class JmsConsumer_topic {
                 try {
                     System.out.println("****消费者的map消息："+mapMessage.getString("k1"));
                 }catch (JMSException e) {
+                    e.printStackTrace();
                 }
             }
 
